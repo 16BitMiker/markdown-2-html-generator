@@ -1,4 +1,4 @@
-# Markdown 2 Html Generator
+# Markdown 2 HTML Generator
 
 Make quick and easy html from markdown!  Run and go!
 
