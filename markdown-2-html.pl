@@ -1,5 +1,9 @@
 #!/usr/bin/env perl
 
+my $md = Markdown::Text::Converter->load();
+
+$md->convert();
+
 package Markdown::Text::Converter
 {
 	use Text::Markdown 'markdown';
@@ -102,10 +106,6 @@ package Markdown::Text::Converter
 	}
 		
 }
-
-my $md = Markdown::Text::Converter->load();
-
-$md->convert();
 
 __END__
 

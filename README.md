@@ -11,5 +11,6 @@ Make quick and easy html from markdown!  Run and go!
 
 - Allow for custom <title>
 - Add cool javascript fade ins to template
-- Other stuff?
+- Add a quit for menu prompt
+- Add ability to add *target="_blank"* to links
 
