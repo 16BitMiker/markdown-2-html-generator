@@ -29,7 +29,7 @@ package Markdown::Text::Converter
 		
 		# goto menu shinanigans
 		MENU:
-		{
+		{			
 			say q|~|x25;
 			say q|~ | . q|Markdown 2 HTML|;
 			say q|~|x25;
@@ -63,7 +63,11 @@ package Markdown::Text::Converter
 		close $md;
 	
 		# verify template
-		my $template = q|template.html|;
+		my $dir = q||;
+		if ($0 =~ m~.*/~)
+		{ $dir = $0 =~ s`^(.*/).*$`$1`er; }
+		
+		my $template = qq|${dir}template.html|;
 		
 		unless (-e $template)
 		{
