@@ -61,6 +61,9 @@ package Markdown::Text::Converter
 		open my $md, q|<|, $$self{file} or die qq|> can't open $$self{file}\n|;
 		my $html_converted = markdown(join q||, <$md>);
 		close $md;
+		
+		# add open new page for links
+		$html_converted =~ s`<a href`<a target="_blank" href`g;
 	
 		# verify template
 		my $dir = q||;
